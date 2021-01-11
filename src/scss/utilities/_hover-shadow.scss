@@ -1,0 +1,7 @@
+.hover-shadow {
+  padding: 2rem;
+  transition: box-shadow 150ms ease;
+  &:hover {
+    box-shadow: 0 0 2rem get-color("shadow");
+  }
+}

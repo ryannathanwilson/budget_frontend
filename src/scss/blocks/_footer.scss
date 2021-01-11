@@ -1,0 +1,60 @@
+#footer {
+  .decoration {
+    svg {
+      display: block;
+      margin-bottom: -2px;
+    }
+    #a {
+      fill: get-color("secondary");
+    }
+    #b {
+      fill: get-color("tertiary");
+    }
+    #c {
+      stroke: get-color("primary-glare");
+      stroke-width: 0.2px;
+      fill: none;
+    }
+  }
+
+  .content {
+    padding: 3rem 0;
+    text-align: center;
+	font-size: get-size("300");
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom: 5rem;
+      @include media-query("mobile") {
+        flex-direction: row;
+      }
+      .col {
+        text-align: left;
+        padding: 1rem 2rem 0rem 2rem;
+        margin-bottom: 1rem;
+        * + * {
+          margin-top: 1rem;
+        }
+        .head {
+          color: get-color("white");
+          font-weight: 700;
+        }
+      }
+      .subscribe {
+        border: solid 1px get-color("tertiary-glare");
+        border-radius: 5px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        input {
+          line-height: 0.5rem;
+        }
+      }
+    }
+  }
+}

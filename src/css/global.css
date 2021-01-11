@@ -1,0 +1,602 @@
+@charset "UTF-8";
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+  * SIZE SCALE
+  * This is a Major Third scale that powers all the utilities that
+  * it is relevant for (font-size, margin, padding). All items are
+  * calcuated off the base size, so change that and cascade across
+  * your whole project.
+  */
+/**
+  * COLORS
+  * Colors are shared between backgrounds and text by default. 
+  * You can also use them to power borders, fills or shadows, for example.
+  */
+/**
+  * CORE CONFIG
+  * This powers everything from utility class generation to breakpoints
+  * to enabling/disabling pre-built components/utilities.
+  */
+.bg-primary {
+  background: #0b2b3d;
+}
+
+.bg-primary-glare {
+  background: #268f75;
+}
+
+.bg-secondary {
+  background: #ff8484;
+}
+
+.bg-tertiary {
+  background: #78b0be;
+}
+
+.bg-tertiary-glare {
+  background: #cae6ec;
+}
+
+.bg-quaternary {
+  background: #e7fefe;
+}
+
+.bg-light {
+  background: #e2e2e2;
+}
+
+.bg-white {
+  background: #ffffff;
+}
+
+.bg-grey {
+  background: #707070;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.bg-shadow {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.color-primary {
+  color: #0b2b3d;
+}
+
+.color-primary-glare {
+  color: #268f75;
+}
+
+.color-secondary {
+  color: #ff8484;
+}
+
+.color-tertiary {
+  color: #78b0be;
+}
+
+.color-tertiary-glare {
+  color: #cae6ec;
+}
+
+.color-quaternary {
+  color: #e7fefe;
+}
+
+.color-light {
+  color: #e2e2e2;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-grey {
+  color: #707070;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.color-shadow {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.font-base {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", Courier New, Courier, monospace;
+}
+
+.gap-top-300 {
+  margin-top: 0.8rem;
+}
+
+.gap-top-400 {
+  margin-top: 1rem;
+}
+
+.gap-top-500 {
+  margin-top: 1.33rem;
+}
+
+.gap-top-600 {
+  margin-top: 1.77rem;
+}
+
+.gap-top-700 {
+  margin-top: 2.4rem;
+}
+
+.pad-top-300 {
+  padding-top: 0.8rem;
+}
+
+.pad-top-400 {
+  padding-top: 1rem;
+}
+
+.pad-top-500 {
+  padding-top: 1.33rem;
+}
+
+.pad-top-600 {
+  padding-top: 1.77rem;
+}
+
+.pad-top-700 {
+  padding-top: 2.4rem;
+}
+
+.text-300 {
+  font-size: 0.8rem;
+}
+
+.text-400 {
+  font-size: 1rem;
+}
+
+.text-500 {
+  font-size: 1.33rem;
+}
+
+.text-600 {
+  font-size: 1.77rem;
+}
+
+.text-700 {
+  font-size: 2.4rem;
+}
+
+.weight-medium {
+  font-weight: 300;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+  .mobile\:text-300 {
+    font-size: 0.8rem;
+  }
+  .mobile\:text-400 {
+    font-size: 1rem;
+  }
+  .mobile\:text-500 {
+    font-size: 1.33rem;
+  }
+  .mobile\:text-600 {
+    font-size: 1.77rem;
+  }
+  .mobile\:text-700 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .tablet\:text-300 {
+    font-size: 0.8rem;
+  }
+  .tablet\:text-400 {
+    font-size: 1rem;
+  }
+  .tablet\:text-500 {
+    font-size: 1.33rem;
+  }
+  .tablet\:text-600 {
+    font-size: 1.77rem;
+  }
+  .tablet\:text-700 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 0.8rem);
+}
+
+.hover-shadow {
+  padding: 2rem;
+  transition: box-shadow 150ms ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+.icons {
+  display: inline-block;
+  position: relative;
+  transform: translateY(12%);
+}
+
+.link-hover {
+  cursor: pointer;
+  position: relative;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ff8484;
+  opacity: 0;
+  transition: opacity 150ms;
+}
+
+.link-hover:hover::after {
+  opacity: 1;
+}
+
+.radius {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.33rem;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0b2b3d;
+  color: #e2e2e2;
+  padding-bottom: 5rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.33rem;
+}
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 1.77rem;
+  }
+}
+
+h3 {
+  font-size: 1.33rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+form,
+.form {
+  width: 100%;
+  margin: 0rem auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  position: relative;
+  padding: .5rem;
+  background: #0b2b3d;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #0b2b3d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+button:hover {
+  background: #ffffff;
+  color: #0b2b3d;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+#footer .decoration svg {
+  display: block;
+  margin-bottom: -2px;
+}
+
+#footer .decoration #a {
+  fill: #ff8484;
+}
+
+#footer .decoration #b {
+  fill: #78b0be;
+}
+
+#footer .decoration #c {
+  stroke: #268f75;
+  stroke-width: 0.2px;
+  fill: none;
+}
+
+#footer .content {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#footer .content .columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 600px) {
+  #footer .content .columns {
+    flex-direction: row;
+  }
+}
+
+#footer .content .columns .col {
+  text-align: left;
+  padding: 1rem 2rem 0rem 2rem;
+  margin-bottom: 1rem;
+}
+
+#footer .content .columns .col * + * {
+  margin-top: 1rem;
+}
+
+#footer .content .columns .col .head {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+#footer .content .columns .subscribe {
+  border: solid 1px #cae6ec;
+  border-radius: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#footer .content .columns .subscribe input {
+  line-height: 0.5rem;
+}
+
+#home {
+  max-width: 1000px;
+  margin: auto;
+  display: block;
+}
+
+#home .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#home .card {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ff8484;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+#home #chart .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#home #chart .card {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ff8484;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  /* background-color: white; */
+  margin-bottom: 2rem;
+  font-size: 1.33rem;
+}
+
+nav #title {
+  flex-shrink: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 2em;
+  cursor: pointer;
+  position: relative;
+}
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,40 @@
+#home {
+		max-width: 1000px;
+		margin: auto;
+		display: block;
+	
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.card {
+		display: block;
+		width: 300px;
+		height: 300px;
+		border: 1px solid get-color("secondary");
+		border-radius: 1rem;
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	#chart {
+	
+		.list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+	
+		.card {
+			display: block;
+			width: 300px;
+			height: 300px;
+			border: 1px solid get-color("secondary");
+			border-radius: 1rem;
+			margin: 1rem;
+			padding: 1rem;
+		}
+	}
+}

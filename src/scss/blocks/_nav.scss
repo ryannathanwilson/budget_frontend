@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-direction: row;
+	flex-wrap: wrap;
+    padding: 1rem;
+    /* background-color: white; */
+	margin-bottom: 2rem;
+	font-size: get-size("500");
+	#title {
+		flex-shrink: 0;
+	}
+	ul {
+		display: flex;
+		flex-direction: row;
+	}
+	li {
+		list-style: none;
+		margin-left: 2em;
+		cursor: pointer;
+		position: relative;
+	}
+}

@@ -1,0 +1,116 @@
+@import "config";
+@import "../../node_modules/gorko/gorko.scss";
+@import "reset";
+@import "utilities/flow";
+@import "utilities/hover-shadow";
+@import "utilities/icons";
+@import "utilities/link-hover";
+@import "utilities/radius";
+@import "utilities/section";
+@import "utilities/wrapper";
+// @import "../../static/fonts/fonts.css";
+
+// @font-face {
+//   font-family: "Open Sans";
+//   src: url("../../static/fonts/OpenSans-Light.woff2") format("woff2"),
+//     url("../../static/fonts/OpenSans-Light.woff") format("woff");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Open Sans";
+//   src: url("../../static/fonts/OpenSans-Bold.woff2") format("woff2"),
+//     url("../../static/fonts/OpenSans-Bold.woff") format("woff");
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  background-color: get-color("primary");
+  color: get-color("light");
+  padding-bottom: 5rem;
+
+  @include apply-utility("weight", "medium");
+}
+
+
+h1 {
+  font-size: get-size("700");
+}
+
+h2 {
+  font-size: get-size("500");
+  @include media-query("mobile") {
+    font-size: get-size("600");
+  }
+}
+h3 {
+  font-size: get-size("500");
+}
+h4 {
+  font-size: get-size("400");
+}
+h5 {
+  font-size: get-size("300");
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+form,
+.form {
+  width: 100%;
+  margin: 0rem auto;
+  max-width: 300px;
+  text-align: center;
+}
+input,
+textarea {
+	display: block;
+	width: 100%;
+	border: 1px solid get-color("grey");
+	border-radius: 5px;
+	line-height: 1.5;
+	padding: 5px;
+	margin-bottom: 1rem;
+}
+label {
+  display: block;
+  text-align: left;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  position: relative;
+  padding: .5rem;
+  background: get-color("primary");
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid get-color("primary");
+  color: get-color("white");
+  cursor: pointer;
+  transition: all 150ms ease;
+  &:hover {
+	  background: get-color("white");
+	  color: get-color("primary")
+  }
+
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+@import "blocks/footer";
+@import "blocks/home";
+@import "blocks/nav";

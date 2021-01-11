@@ -1,0 +1,18 @@
+.link-hover {
+	cursor: pointer;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: get-color("secondary");
+		opacity: 0;
+		transition: opacity 150ms;
+	}
+	&:hover::after {
+		opacity: 1;
+	}
+}
