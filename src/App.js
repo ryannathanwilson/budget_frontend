@@ -1,3 +1,4 @@
+import React from 'react'
 import './css/global.css';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-	  		Updated 11 January 2021
+	  		Updated 20 July 2021
         </a>
     </div>
   );
