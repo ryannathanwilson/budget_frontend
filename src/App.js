@@ -1,22 +1,33 @@
-import React from 'react'
-import './css/global.css';
+import React, { useState } from "react";
+import "./css/global.css";
+import LoginForm from "./components/LoginForm";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 function App() {
-  return (
-    <div className="RNW REACT">
-        <h1>
-			RNW REACT TEMPLATE
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-	  		Updated 20 July 2021
-        </a>
-    </div>
-  );
+    const [username, setUsername] = useState("");
+    const handleUsername = (e) => {
+        setUsername(e.target.value);
+    };
+    const [password, setPassword] = useState("");
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    };
+    return (
+        <div className="RNW REACT">
+            <h1>BUDGE</h1>
+            <Router>
+                <Switch>
+                    <LoginForm
+                        handleUsername={handleUsername}
+                        handlePassword={handlePassword}
+                        username={username}
+                        password={password}
+                    />
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
