@@ -2,7 +2,6 @@ import React from "react";
 
 
 const LoginForm = function (props) {
-
     const handleLogin = async (e) => {
         e.preventDefault();
         let response = await fetch("http://127.0.0.1:8000/token/", {
@@ -10,7 +9,6 @@ const LoginForm = function (props) {
             headers: {
                 "Content-Type": "application/json",
             },
-            // body: JSON.stringify(input),
             body: JSON.stringify({
                 username: `${props.username}`,
                 password: `${props.password}`,
@@ -18,25 +16,12 @@ const LoginForm = function (props) {
         });
         let data = await response.json();
         if (response.status === 200) {
-            // localStorage.setItem("token", data.token);
             localStorage.setItem("access", data.access);
             localStorage.setItem("refresh", data.refresh);
-            console.log(data);
-            // this.refresh_chart();
-            // this.setState({
-            //     logged_in: true,
-            //     displayed_form: "",
-            //     username: username,
-            //     error: "",
-            // });
+			props.handleLoginState(true);
         } else {
             console.log("fail...");
-            // this.setState({
-            //     logged_in: false,
-            //     displayed_form: "login",
-            //     username: "",
-            //     error: "there was an error",
-            // });
+			props.handleLoginState(false);
         }
     };
 	return (
