@@ -22,6 +22,8 @@ const LoginForm = function (props) {
         } else {
             console.log("fail...");
 			props.handleLoginState(false);
+			localStorage.removeItem("access");
+			localStorage.removeItem("refresh");
         }
     };
 	return (

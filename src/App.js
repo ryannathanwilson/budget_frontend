@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Error } from "react";
 import "./css/global.css";
 import LoginForm from "./components/LoginForm";
 import ViewBalances from "./components/ViewBalances";
@@ -36,6 +36,7 @@ function App() {
         let data = await response.json();
         if (response.status === 200) {
             localStorage.setItem("access", data.access);
+            console.log(data.access);
             setIsLoggedIn(true);
             console.log("refreshed succesfully");
         } else {
@@ -58,7 +59,9 @@ function App() {
                         isLoggedIn={isLoggedIn}
                         path="/"
                         exact
-                        render={() => <ViewBalances />}
+                        render={() => (
+                            <ViewBalances handleLoginState={handleLoginState} />
+                        )}
                     />
                     <PrivateRoute
                         isLoggedIn={isLoggedIn}
@@ -87,6 +90,7 @@ function App() {
                             />
                         )}
                     />
+                    <Route component={Error} />
                 </Switch>
             </Router>
         </div>
