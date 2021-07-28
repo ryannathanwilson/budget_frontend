@@ -27,11 +27,12 @@ const ViewBalances = (props) => {
         getMoneyData();
     }, []);
     useEffect(() => {
-        let example = moneyData[0];
+        let example = moneyData;
         if (typeof(example) === "object" && example !== null) {
-            if ("category" in example) {
-                console.log(example.category);
-				setMyInput(example.category);
+			console.log(example);
+            if ("Food" in example) {
+                console.log(example.Food);
+				setMyInput(example.Food);
             }
         }
     }, [moneyData]);
