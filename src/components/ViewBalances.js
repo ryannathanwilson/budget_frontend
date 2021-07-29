@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ViewBalances = (props) => {
-    const [moneyData, setMoneyData] = useState([]);
+    const [moneyData, setMoneyData] = useState({});
 	const [myInput, setMyInput] = useState("");
     const getMoneyData = () => {
         fetch("http://127.0.0.1:8000/api/get_money_data/", {
@@ -12,11 +12,9 @@ const ViewBalances = (props) => {
             },
         })
             .then(function (response) {
-                console.log(`the response: ${response}`);
                 return response.json();
             })
             .then(function (myJson) {
-                console.log(`JSON: ${myJson}`);
                 setMoneyData(JSON.parse(myJson));
             })
             .catch(function (error) {
@@ -31,8 +29,7 @@ const ViewBalances = (props) => {
         if (typeof(example) === "object" && example !== null) {
 			console.log(example);
             if ("Food" in example) {
-                console.log(example.Food);
-				setMyInput(example.Food);
+				setMyInput(example.Food.thisMonthExpenses);
             }
         }
     }, [moneyData]);
