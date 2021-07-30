@@ -22,6 +22,7 @@
   * This powers everything from utility class generation to breakpoints
   * to enabling/disabling pre-built components/utilities.
   */
+/* GORKO: auto-generated utility classes start */
 .bg-primary {
   background: #0b2b3d;
 }
@@ -186,7 +187,7 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .mobile\:text-300 {
     font-size: 0.8rem;
   }
@@ -204,7 +205,7 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .tablet\:text-300 {
     font-size: 0.8rem;
   }
@@ -222,6 +223,7 @@
   }
 }
 
+/* GORKO: auto-generated utility classes end */
 /* Box sizing rules */
 *,
 *::before,
@@ -534,44 +536,6 @@ button:hover {
   line-height: 0.5rem;
 }
 
-#home {
-  max-width: 1000px;
-  margin: auto;
-  display: block;
-}
-
-#home .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-#home .card {
-  display: block;
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ff8484;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-
-#home #chart .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-#home #chart .card {
-  display: block;
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ff8484;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -599,4 +563,26 @@ nav li {
   cursor: pointer;
   position: relative;
 }
-/*# sourceMappingURL=global.css.map */
+
+#view-balances {
+  font-size: 2rem;
+}
+
+#view-balances .balance-card {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  justify-content: space-between;
+  background-color: #ff8484;
+  font-weight: 800;
+}
+
+#view-balances .balance-card .category {
+  color: #268f75;
+}
+
+#view-balances ul {
+  list-style: none;
+  margin-left: 5rem;
+}

@@ -1,0 +1,20 @@
+#view-balances {
+	font-size: 2rem;
+	.balance-card {
+		display: flex;
+		margin: 1rem;
+		padding: 1rem 2rem;
+		border-radius: 3rem;
+		justify-content: space-between;
+		background-color: get-color('secondary');
+		font-weight: 800;
+		
+		.category {
+			color: get-color('primary-glare');
+		}
+	}
+	ul {
+		list-style: none;
+		margin-left: 5rem;
+	}
+}
