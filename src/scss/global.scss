@@ -32,13 +32,12 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
-  background-color: get-color("primary");
-  color: get-color("light");
+  background-color: var(--primary);
+  color: var(--light);
   padding-bottom: 5rem;
 
   @include apply-utility("weight", "medium");
 }
-
 
 h1 {
   font-size: get-size("700");
@@ -74,13 +73,13 @@ form,
 }
 input,
 textarea {
-	display: block;
-	width: 100%;
-	border: 1px solid get-color("grey");
-	border-radius: 5px;
-	line-height: 1.5;
-	padding: 5px;
-	margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 5px;
+  margin-bottom: 1rem;
 }
 label {
   display: block;
@@ -91,19 +90,18 @@ textarea {
 }
 button {
   position: relative;
-  padding: .5rem;
-  background: get-color("primary");
+  padding: 0.5rem;
+  background: var(--primary);
   border-radius: 5px;
   width: 100%;
-  border: 1px solid get-color("primary");
-  color: get-color("white");
+  border: 1px solid var(--primary);
+  color: var(--white);
   cursor: pointer;
   transition: all 150ms ease;
   &:hover {
-	  background: get-color("white");
-	  color: get-color("primary")
+    background: var(--white);
+    color: var(--primary);
   }
-
 }
 
 :focus {

@@ -17,6 +17,20 @@
   * Colors are shared between backgrounds and text by default. 
   * You can also use them to power borders, fills or shadows, for example.
   */
+:root {
+  --primary: #0b2b3d;
+  --primary-glare: #268f75;
+  --secondary: #ff8484;
+  --tertiary: #78b0be;
+  --tertiary-glare: #cae6ec;
+  --quaternary: #e7fefe;
+  --light: #e2e2e2;
+  --white: #ffffff;
+  --grey: #707070;
+  --black: #000000;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
 /**
   * CORE CONFIG
   * This powers everything from utility class generation to breakpoints
@@ -191,38 +205,44 @@
   .mobile\:text-300 {
     font-size: 0.8rem;
   }
+
   .mobile\:text-400 {
     font-size: 1rem;
   }
+
   .mobile\:text-500 {
     font-size: 1.33rem;
   }
+
   .mobile\:text-600 {
     font-size: 1.77rem;
   }
+
   .mobile\:text-700 {
     font-size: 2.4rem;
   }
 }
-
 @media (min-width: 1000px) {
   .tablet\:text-300 {
     font-size: 0.8rem;
   }
+
   .tablet\:text-400 {
     font-size: 1rem;
   }
+
   .tablet\:text-500 {
     font-size: 1.33rem;
   }
+
   .tablet\:text-600 {
     font-size: 1.77rem;
   }
+
   .tablet\:text-700 {
     font-size: 2.4rem;
   }
 }
-
 /* GORKO: auto-generated utility classes end */
 /* Box sizing rules */
 *,
@@ -319,7 +339,6 @@ th {
     scroll-behavior: auto !important;
   }
 }
-
 .flow > * + * {
   margin-top: var(--flow-space, 0.8rem);
 }
@@ -328,7 +347,6 @@ th {
   padding: 2rem;
   transition: box-shadow 150ms ease;
 }
-
 .hover-shadow:hover {
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 }
@@ -343,7 +361,6 @@ th {
   cursor: pointer;
   position: relative;
 }
-
 .link-hover::after {
   content: "";
   position: absolute;
@@ -355,7 +372,6 @@ th {
   opacity: 0;
   transition: opacity 150ms;
 }
-
 .link-hover:hover::after {
   opacity: 1;
 }
@@ -380,8 +396,8 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
-  background-color: #0b2b3d;
-  color: #e2e2e2;
+  background-color: var(--primary);
+  color: var(--light);
   padding-bottom: 5rem;
   font-weight: 300;
 }
@@ -393,7 +409,6 @@ h1 {
 h2 {
   font-size: 1.33rem;
 }
-
 @media (min-width: 600px) {
   h2 {
     font-size: 1.77rem;
@@ -429,7 +444,7 @@ input,
 textarea {
   display: block;
   width: 100%;
-  border: 1px solid #707070;
+  border: 1px solid var(--grey);
   border-radius: 5px;
   line-height: 1.5;
   padding: 5px;
@@ -447,19 +462,18 @@ textarea {
 
 button {
   position: relative;
-  padding: .5rem;
-  background: #0b2b3d;
+  padding: 0.5rem;
+  background: var(--primary);
   border-radius: 5px;
   width: 100%;
-  border: 1px solid #0b2b3d;
-  color: #ffffff;
+  border: 1px solid var(--primary);
+  color: var(--white);
   cursor: pointer;
   transition: all 150ms ease;
 }
-
 button:hover {
-  background: #ffffff;
-  color: #0b2b3d;
+  background: var(--white);
+  color: var(--primary);
 }
 
 :focus {
@@ -471,21 +485,17 @@ button:hover {
   display: block;
   margin-bottom: -2px;
 }
-
 #footer .decoration #a {
   fill: #ff8484;
 }
-
 #footer .decoration #b {
   fill: #78b0be;
 }
-
 #footer .decoration #c {
   stroke: #268f75;
   stroke-width: 0.2px;
   fill: none;
 }
-
 #footer .content {
   padding: 3rem 0;
   text-align: center;
@@ -493,7 +503,6 @@ button:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 #footer .content .columns {
   display: flex;
   flex-wrap: wrap;
@@ -501,28 +510,23 @@ button:hover {
   justify-content: space-around;
   margin-bottom: 5rem;
 }
-
 @media (min-width: 600px) {
   #footer .content .columns {
     flex-direction: row;
   }
 }
-
 #footer .content .columns .col {
   text-align: left;
   padding: 1rem 2rem 0rem 2rem;
   margin-bottom: 1rem;
 }
-
 #footer .content .columns .col * + * {
   margin-top: 1rem;
 }
-
 #footer .content .columns .col .head {
   color: #ffffff;
   font-weight: 700;
 }
-
 #footer .content .columns .subscribe {
   border: solid 1px #cae6ec;
   border-radius: 5px;
@@ -531,7 +535,6 @@ button:hover {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 #footer .content .columns .subscribe input {
   line-height: 0.5rem;
 }
@@ -547,16 +550,13 @@ nav {
   margin-bottom: 2rem;
   font-size: 1.33rem;
 }
-
 nav #title {
   flex-shrink: 0;
 }
-
 nav ul {
   display: flex;
   flex-direction: row;
 }
-
 nav li {
   list-style: none;
   margin-left: 2em;
@@ -567,22 +567,21 @@ nav li {
 #view-balances {
   font-size: 2rem;
 }
-
 #view-balances .balance-card {
   display: flex;
   margin: 1rem;
   padding: 1rem 2rem;
   border-radius: 3rem;
   justify-content: space-between;
-  background-color: #ff8484;
+  background-color: var(--secondary);
   font-weight: 800;
 }
-
 #view-balances .balance-card .category {
-  color: #268f75;
+  color: var(--primary-glare);
 }
-
 #view-balances ul {
   list-style: none;
   margin-left: 5rem;
 }
+
+/*# sourceMappingURL=global.css.map */
